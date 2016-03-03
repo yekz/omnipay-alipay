@@ -29,7 +29,7 @@ class ExpressGateway extends BaseAbstractGateway
 
     public function purchase(array $parameters = array(), $service = "directPay")
     {
-        $this->setService($this->$service[$service]);
+        $this->setService($this->service[$service]);
 
         return $this->createRequest('\Omnipay\Alipay\Message\ExpressPurchaseRequest', $parameters);
     }
